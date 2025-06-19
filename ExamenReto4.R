@@ -29,6 +29,8 @@ miss_var_summary(datos)
 vis_miss(datos)
 
 #Tratamiento de NAS
-KNN <- kNN(datos,variable = c("Minutes","Seasons"))
-countNA(KNN$Minutes)
-countNA(KNN$Seasons)
+datosKNN <- kNN(datos,variable = c("Minutes","Seasons"))
+countNA(datosKNN$Minutes)
+countNA(datosKNN$Seasons)
+
+write.csv(datosKNN,"C:/BDA1/RETO 4/Data Science/Prueba Examen 2024/Proyecto_Prueba/datosKNN.csv",row.names = F)
